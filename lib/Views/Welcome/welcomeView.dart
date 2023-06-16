@@ -1,9 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:repairs_duniya_s/Screen_page/LoginPages/phone.dart';
-class WelcomPage extends StatelessWidget {
-  const WelcomPage({Key? key}) : super(key: key);
+
+import '../../Helpers/import.dart';
+
+class WelcomeView extends StatelessWidget {
+  const WelcomeView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
