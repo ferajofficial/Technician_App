@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:repairs_duniya_s/Screen_page/IdentityProofPage/identityProof.dart';
 import 'package:repairs_duniya_s/Screen_page/MyEarnings/my_earnings.dart';
 import 'package:repairs_duniya_s/Screen_page/UploadVideoPages/before_work_page.dart';
 import 'package:repairs_duniya_s/Screen_page/WelcomePage/welcom_page.dart';
@@ -96,7 +97,7 @@ class Mydrawer extends StatelessWidget {
                       ),
                       title: const Text('WorkDone'),
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: ((context)=>BeforeWorkPage())));
+                        Navigator.push(context, MaterialPageRoute(builder: ((context)=>IdentityProof())));
                       }),
                   ListTile(
                     leading: const Icon(

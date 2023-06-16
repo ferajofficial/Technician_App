@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 class ImageUpload extends StatefulWidget {
   const ImageUpload({Key? key}) : super(key: key);
@@ -55,11 +56,20 @@ class _ImageUploadState extends State<ImageUpload> {
             },
           );
         },
-        child: CircleAvatar(
-          backgroundImage: _image != null ? FileImage(_image!) : AssetImage('images/profile.png')as ImageProvider<Object>,
-          backgroundColor: Colors.transparent,
-          radius: 50,
-        ),
+        child: Container(
+          width: 150.w,
+          height: 140.h,
+          decoration: BoxDecoration(
+              color: Colors.black,
+              borderRadius: BorderRadius.circular(10.0),
+              border: Border.all(color: Colors.white)
+          ),
+          child:  _image != null
+              ? Image.file(_image!, fit: BoxFit.cover,)
+              : Icon(Icons.add,color: Colors.white,size: 50,)
+
+        )
     );
   }
 }
+
