@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:repairs_duniya_s/Screen_page/MyEarnings/my_earnings.dart';
+import 'package:repairs_duniya_s/Screen_page/UploadVideoPages/before_work_page.dart';
+import 'package:repairs_duniya_s/Screen_page/WelcomePage/welcom_page.dart';
 import 'package:repairs_duniya_s/bottomNavigationBar.dart';
 
 import 'Screen_page/RewardPage/reward_page.dart';
@@ -93,7 +95,9 @@ class Mydrawer extends StatelessWidget {
                         color: Colors.black,
                       ),
                       title: const Text('WorkDone'),
-                      onTap: () {}),
+                      onTap: () {
+                        //Navigator.push(context, MaterialPageRoute(builder: ((context)=>BeforeWorkPage())));
+                      }),
                   ListTile(
                     leading: const Icon(
                       Icons.logout,
@@ -109,31 +113,16 @@ class Mydrawer extends StatelessWidget {
             ],
           ),
           Positioned(
-            left: 260,
-            top: 20,
+            left: 150.w,
+            top: 110.h,
+            right: 10.w,
             child: IconButton(
               icon: const Icon(
                 Icons.arrow_forward_ios,
                 color: Colors.white,
-              ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
-          ),
-          Positioned(
-            left: 130,
-            top: 115,
-            right: 10,
-            child: IconButton(
-              icon: const Icon(
-                Icons.edit,
-                color: Colors.white,
                 size: 20,
               ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
+              onPressed: () {},
             ),
           ),
         ],

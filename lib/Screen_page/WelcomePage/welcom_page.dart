@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:repairs_duniya_s/Screen_page/LoginPages/phone.dart';
 class WelcomPage extends StatelessWidget {
   const WelcomPage({Key? key}) : super(key: key);
 
@@ -78,7 +79,9 @@ class WelcomPage extends StatelessWidget {
                         )
                       ),
                       child: TextButton(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder: ((context)=>MyPhone())));
+                          },
                           child: Text('Next',
                             style: TextStyle(color: Colors.black,fontSize: 18),
                           )),

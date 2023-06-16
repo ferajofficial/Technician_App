@@ -32,6 +32,7 @@ class _BottomNavigationBar1State extends State<BottomNavigationBar1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       key: scaffoldKey,
       drawerEnableOpenDragGesture: false,

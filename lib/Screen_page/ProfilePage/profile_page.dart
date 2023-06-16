@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:image_picker/image_picker.dart';
 import '../../bottomNavigationBar.dart';
 import '../../drawer.dart';
 
@@ -14,6 +17,20 @@ class _MyProfileState extends State<MyProfile> {
   final TextEditingController mobileController = TextEditingController();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
+
+  File? _image;
+
+  Future<void> _pickImage() async {
+    final picker = ImagePicker();
+    final pickedImage = await picker.pickImage(source: ImageSource.gallery);
+
+    if (pickedImage != null) {
+      setState(() {
+        _image = File(pickedImage.path);
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -42,10 +59,14 @@ class _MyProfileState extends State<MyProfile> {
                       style: TextStyle(color: Colors.black,fontSize: 27,fontWeight: FontWeight.w700),
                     ),
                   ),
-                  CircleAvatar(
-                    child: Image.asset('images/profile.png'),
-                    backgroundColor: Colors.transparent,
-                    radius: 50,
+                  GestureDetector(
+                    child: CircleAvatar(
+                      //backgroundImage: AssetImage('images/profile.png'),
+                      backgroundImage: _image != null ? FileImage(_image!) : AssetImage('images/profile.png')as ImageProvider<Object>,
+                      backgroundColor: Colors.transparent,
+                      radius: 50,
+                    ),
+                    onTap: _pickImage
                   ),
                   Container(
                     width: 270.w,

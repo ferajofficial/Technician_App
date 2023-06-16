@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pinput/pinput.dart';
+import 'package:repairs_duniya_s/bottomNavigationBar.dart';
 
 final TextEditingController mobileController = TextEditingController();
 class MyOtp extends StatefulWidget {
@@ -39,6 +40,7 @@ class _MyOtpState extends State<MyOtp> {
     );
     var code = "";
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           Container(
@@ -97,7 +99,9 @@ class _MyOtpState extends State<MyOtp> {
                       borderRadius: BorderRadius.circular(40)
                   ),
                   child: TextButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: ((context)=>BottomNavigationBar1())));
+                      },
                       child: Text('Continue',
                         style: TextStyle(color: Colors.white,fontSize: 19),
                       )),

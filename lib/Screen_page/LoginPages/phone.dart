@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:repairs_duniya_s/Screen_page/LoginPages/otp.dart';
 
 
 class MyPhone extends StatefulWidget {
@@ -15,6 +16,7 @@ class _MyPhoneState extends State<MyPhone> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           Container(
@@ -71,6 +73,7 @@ class _MyPhoneState extends State<MyPhone> {
                         child: TextFormField(
                           keyboardType: TextInputType.number,
                           controller: mobileController,
+                          style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                             prefixIcon: const Icon(
                               Icons.phone_android,
@@ -80,6 +83,7 @@ class _MyPhoneState extends State<MyPhone> {
                             filled: true,
                             labelText: 'Mobile Number',
                             prefixText: '+91',
+                            prefixStyle: const TextStyle(color: Colors.white),
                             labelStyle: const TextStyle(color: Colors.white),
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -110,7 +114,9 @@ class _MyPhoneState extends State<MyPhone> {
                             borderRadius: BorderRadius.circular(40)
                         ),
                         child: TextButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: ((context)=>MyOtp())));
+                            },
                             child: Text('Get OTP',
                               style: TextStyle(color: Colors.black,fontSize: 19),
                             )),

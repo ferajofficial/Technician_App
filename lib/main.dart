@@ -4,6 +4,8 @@ import 'package:repairs_duniya_s/Screen_page/BookingConfirmation/bookingConfirma
 import 'package:repairs_duniya_s/Screen_page/HomePage/home_page.dart';
 import 'package:repairs_duniya_s/Screen_page/LoginPages/otp.dart';
 import 'package:repairs_duniya_s/Screen_page/LoginPages/phone.dart';
+import 'package:repairs_duniya_s/Screen_page/UploadVideoPages/after_work_page.dart';
+import 'package:repairs_duniya_s/Screen_page/UploadVideoPages/before_work_page.dart';
 import 'package:repairs_duniya_s/Screen_page/WelcomePage/welcom_page.dart';
 import 'package:repairs_duniya_s/bottomNavigationBar.dart';
 
@@ -14,13 +16,12 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(builder: (context,index){
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: BottomNavigationBar1(),
+        home: WelcomPage(),
       );
     },
     );
