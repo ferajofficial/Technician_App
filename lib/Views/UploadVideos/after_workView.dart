@@ -1,20 +1,18 @@
-import 'dart:io';
 
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:repairs_duniya_s/Screen_page/UploadVideoPages/after_work_page.dart';
-import 'package:repairs_duniya_s/Screen_page/UploadVideoPages/videoUpload.dart';
-import 'package:video_player/video_player.dart';
 
-class BeforeWorkPage extends StatefulWidget {
-  const BeforeWorkPage({Key? key}) : super(key: key);
+
+
+import '../../Helpers/import.dart';
+
+
+class AfterWorkPage extends StatefulWidget {
+  const AfterWorkPage({Key? key}) : super(key: key);
 
   @override
-  State<BeforeWorkPage> createState() => _BeforeWorkPageState();
+  State<AfterWorkPage> createState() => _AfterWorkPageState();
 }
 
-class _BeforeWorkPageState extends State<BeforeWorkPage> {
+class _AfterWorkPageState extends State<AfterWorkPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +35,7 @@ class _BeforeWorkPageState extends State<BeforeWorkPage> {
           children: [
             Padding(
               padding: const EdgeInsets.only(bottom: 15.0),
-              child: Text('Before work video',
+              child: Text('After work video',
                 style: TextStyle(color: Colors.white,fontSize: 27,fontWeight: FontWeight.w500),
               ),
             ),
@@ -47,16 +45,16 @@ class _BeforeWorkPageState extends State<BeforeWorkPage> {
               height: 35.h,
               width:100.w,
               decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10)
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10)
               ),
               child: TextButton(
-                onPressed: (){
-                   Navigator.push(context, MaterialPageRoute(builder: ((context)=>AfterWorkPage())));
-                },
-                child: Text('Next',
-                  style: TextStyle(color: Colors.black,fontSize: 18),
-                ),
+                  onPressed: (){
+                    // Navigator.push(context, MaterialPageRoute(builder: ((context)=>MyPhone())));
+                  },
+                  child: Text('Next',
+                    style: TextStyle(color: Colors.black,fontSize: 18),
+                  ),
               ),
             ),
           ],

@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:repairs_duniya_s/Screen_page/LoginPages/phone.dart';
+
+import '../../Helpers/import.dart';
+
 class WelcomPage extends StatelessWidget {
   const WelcomPage({Key? key}) : super(key: key);
 

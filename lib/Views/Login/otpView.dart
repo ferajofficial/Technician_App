@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:pinput/pinput.dart';
-import 'package:repairs_duniya_s/bottomNavigationBar.dart';
+
+
+import '../../Helpers/import.dart';
 
 final TextEditingController mobileController = TextEditingController();
 class MyOtp extends StatefulWidget {

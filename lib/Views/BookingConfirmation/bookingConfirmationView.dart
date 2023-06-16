@@ -1,8 +1,7 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:confetti/confetti.dart';
+import '../../Helpers/import.dart';
+
 class BookingConfirmation extends StatefulWidget {
   const BookingConfirmation({Key? key}) : super(key: key);
 

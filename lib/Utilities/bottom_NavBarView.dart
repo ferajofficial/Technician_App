@@ -1,9 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:repairs_duniya_s/Screen_page/ProfilePage/profile_page.dart';
-import 'package:repairs_duniya_s/Screen_page/RewardPage/reward_page.dart';
+import 'package:repairs_duniya_s/Helpers/import.dart';
 
-import 'Screen_page/HomePage/home_page.dart';
-import 'drawer.dart';
+
+
 class BottomNavigationBar1 extends StatefulWidget {
   final int? num;
   BottomNavigationBar1({this.num});

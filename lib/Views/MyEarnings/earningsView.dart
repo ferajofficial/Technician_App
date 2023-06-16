@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
+
+
+import '../../Helpers/import.dart';
 
 class MyEarnings extends StatefulWidget {
   const MyEarnings({Key? key}) : super(key: key);
