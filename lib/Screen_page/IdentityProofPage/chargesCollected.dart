@@ -23,8 +23,6 @@ class _ChargesCollectedState extends State<ChargesCollected> {
   }
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
-      // All fields are valid, perform the desired actions
-      // Submit the form data
       print('Form submitted');
     }
   }
@@ -32,6 +30,7 @@ class _ChargesCollectedState extends State<ChargesCollected> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,

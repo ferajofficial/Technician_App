@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:repairs_duniya_s/Screen_page/LoginPages/otp.dart';
-
+import '../../Helpers/import.dart';
 
 class MyPhone extends StatefulWidget {
   const MyPhone({Key? key}) : super(key: key);
@@ -25,55 +21,64 @@ class _MyPhoneState extends State<MyPhone> {
             color: Colors.white,
           ),
           Container(
-              height: MediaQuery.of(context).size.height/1.75,
-            decoration: BoxDecoration(
+            height: MediaQuery.of(context).size.height / 1.75,
+            decoration: const BoxDecoration(
                 color: Colors.black,
                 borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(40),
-                    bottomLeft: Radius.circular(40)
-                )
-            ),
+                    bottomLeft: Radius.circular(40))),
           ),
           Row(
             children: [
-              Image.asset('images/logo_dark.png',scale: 1.6,),
-              Text(' Repairs\n Duniya',
-                  style: GoogleFonts.bigshotOne(color: Colors.white,fontSize: 38.sp,fontWeight: FontWeight.w500)
+              Image.asset(
+                'assets/images/logo_dark.png',
+                scale: 1.6,
               ),
+              Text(' Repairs\n Duniya',
+                  style: GoogleFonts.bigshotOne(
+                      color: Colors.white,
+                      fontSize: 38.sp,
+                      fontWeight: FontWeight.w500)),
             ],
           ),
-
           Positioned(
-            top: MediaQuery.of(context).size.height/2.7,
+            top: MediaQuery.of(context).size.height / 2.7,
             child: Column(
               children: [
                 Text('Login',
-                    style: GoogleFonts.bigshotOne(color: Colors.white,fontSize: 32.sp,fontWeight: FontWeight.w500)
+                    style: GoogleFonts.bigshotOne(
+                        color: Colors.white,
+                        fontSize: 32.sp,
+                        fontWeight: FontWeight.w500)),
+                SizedBox(
+                  height: 20.h,
                 ),
-                SizedBox(height: 20.h,),
                 Container(
                   height: 300.h,
                   width: 300.w,
-                  margin: EdgeInsets.symmetric(horizontal: 30),
+                  margin: const EdgeInsets.symmetric(horizontal: 30),
                   decoration: BoxDecoration(
                       color: Colors.black,
                       borderRadius: BorderRadius.circular(20),
-                      border: Border.all(color: Colors.white)
-                  ),
+                      border: Border.all(color: Colors.white)),
                   child: Column(
                     children: [
                       Padding(
-                        padding:  EdgeInsets.only(top: 20.h,bottom: 35.h),
-                        child: Text('Enter Phone Number',
-                          style: TextStyle(color: Colors.white,fontSize: 20,),
+                        padding: EdgeInsets.only(top: 20.h, bottom: 35.h),
+                        child: const Text(
+                          'Enter Phone Number',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
                         ),
                       ),
-                      Container(
+                      SizedBox(
                         width: 270.w,
                         child: TextFormField(
                           keyboardType: TextInputType.number,
                           controller: mobileController,
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                             prefixIcon: const Icon(
                               Icons.phone_android,
@@ -93,7 +98,7 @@ class _MyPhoneState extends State<MyPhone> {
                               borderRadius: BorderRadius.circular(10),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.white,
                                 width: 2,
                               ),
@@ -111,17 +116,20 @@ class _MyPhoneState extends State<MyPhone> {
                         margin: EdgeInsets.only(top: 80.h),
                         decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(40)
-                        ),
+                            borderRadius: BorderRadius.circular(40)),
                         child: TextButton(
-                            onPressed: (){
-                              Navigator.push(context, MaterialPageRoute(builder: ((context)=>MyOtp())));
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) => const OtpView())));
                             },
-                            child: Text('Get OTP',
-                              style: TextStyle(color: Colors.black,fontSize: 19),
+                            child: const Text(
+                              'Get OTP',
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 19),
                             )),
                       ),
-
                     ],
                   ),
                 ),
@@ -129,13 +137,15 @@ class _MyPhoneState extends State<MyPhone> {
             ),
           ),
           Positioned(
-            bottom: 20,
-              child:IconButton(
-                icon: Icon(Icons.arrow_back,color: Colors.black,size: 40,),
+              bottom: 20,
+              child: IconButton(
+                icon: const Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                  size: 40,
+                ),
                 onPressed: () {},
-              )
-
-          )
+              ))
         ],
       ),
     );

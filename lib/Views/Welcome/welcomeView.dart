@@ -1,9 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:repairs_duniya_s/Screen_page/LoginPages/phone.dart';
-class WelcomPage extends StatelessWidget {
-  const WelcomPage({Key? key}) : super(key: key);
+
+import '../../Helpers/import.dart';
+
+class WelcomeView extends StatelessWidget {
+  const WelcomeView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +20,7 @@ class WelcomPage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CircleAvatar(backgroundImage: AssetImage('images/logo.jpeg'),radius: 25,),
+                      CircleAvatar(backgroundImage: AssetImage('assets/images/logo.jpeg'),radius: 25,),
                       Text(' Repairs Duniya',
                         style: TextStyle(fontSize: 29.sp,fontWeight: FontWeight.w700),
                       ),
@@ -30,7 +29,7 @@ class WelcomPage extends StatelessWidget {
                 ),
                 Align(
                     alignment: Alignment.bottomCenter,
-                    child: Image.asset('images/man.png',height: 240.h,))
+                    child: Image.asset('assets/images/man.png',height: 240.h,))
               ],
             ),
           ),
