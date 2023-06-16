@@ -3,14 +3,14 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:video_player/video_player.dart';
-class VideoUpload extends StatefulWidget {
-  const VideoUpload({Key? key}) : super(key: key);
+class VideoUploadView extends StatefulWidget {
+  const VideoUploadView({Key? key}) : super(key: key);
 
   @override
-  State<VideoUpload> createState() => _VideoUploadState();
+  State<VideoUploadView> createState() => VideoUploadViewState();
 }
 
-class _VideoUploadState extends State<VideoUpload> {
+class VideoUploadViewState extends State<VideoUploadView> {
   File? _videoFile;
   final picker = ImagePicker();
 
@@ -63,20 +63,20 @@ class _VideoUploadState extends State<VideoUpload> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: Text('Upload Video'),
+              title: const Text('Upload Video'),
               content: SingleChildScrollView(
                 child: ListBody(
                   children: <Widget>[
                     GestureDetector(
-                      child: Text('Camera'),
+                      child: const Text('Camera'),
                       onTap: () {
                         _getVideoFile(ImageSource.camera);
                         Navigator.of(context).pop();
                       },
                     ),
-                    Padding(padding: EdgeInsets.all(8.0)),
+                    const Padding(padding: EdgeInsets.all(8.0)),
                     GestureDetector(
-                      child: Text('Gallery'),
+                      child: const Text('Gallery'),
                       onTap: () {
                         _getVideoFile(ImageSource.gallery);
                         Navigator.of(context).pop();
@@ -107,9 +107,9 @@ class _VideoUploadState extends State<VideoUpload> {
           future: _initializeVideoPlayerFuture,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return CircularProgressIndicator();
+              return const CircularProgressIndicator();
             } else if (snapshot.hasError) {
-              return Text('Error: ${snapshot.error}',style: TextStyle(color: Colors.red),);
+              return Text('Error: ${snapshot.error}',style: const TextStyle(color: Colors.red),);
             } else {
               return AspectRatio(
                 aspectRatio: _videoPlayerController!.value.aspectRatio,

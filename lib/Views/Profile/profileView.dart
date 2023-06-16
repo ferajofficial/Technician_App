@@ -1,16 +1,13 @@
-
-
 import '../../Helpers/import.dart';
 
-
-class MyProfile extends StatefulWidget {
-  const MyProfile({Key? key}) : super(key: key);
+class ProfileView extends StatefulWidget {
+  const ProfileView({Key? key}) : super(key: key);
 
   @override
-  State<MyProfile> createState() => _MyProfileState();
+  State<ProfileView> createState() => _MyProfileState();
 }
 
-class _MyProfileState extends State<MyProfile> {
+class _MyProfileState extends State<ProfileView> {
   final TextEditingController mobileController = TextEditingController();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();

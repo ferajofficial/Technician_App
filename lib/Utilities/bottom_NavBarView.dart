@@ -14,9 +14,9 @@ class _BottomNavigationBar1State extends State<BottomNavigationBar1> {
   int _currentIndex = 0;
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final List<Widget> _pagesfooter=[
-    HomePage(),
-    RewardPage(),
-    MyProfile()
+    const HomeView(),
+    const RewardView(),
+    const ProfileView()
   ];
 
   @override
@@ -39,7 +39,7 @@ class _BottomNavigationBar1State extends State<BottomNavigationBar1> {
         elevation: 0,
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: Icon(Icons.menu,color: Colors.black,size: 30,),
+          icon: const Icon(Icons.menu,color: Colors.black,size: 30,),
           onPressed: (){
             if (scaffoldKey.currentState!.isDrawerOpen) {
               scaffoldKey.currentState!.closeDrawer();
@@ -67,7 +67,7 @@ class _BottomNavigationBar1State extends State<BottomNavigationBar1> {
           backgroundColor: Colors.white,
           selectedItemColor: Colors.black,
           unselectedItemColor: Colors.grey,
-          selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+          selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
           currentIndex: _currentIndex,
           onTap: (int index) {
               setState(() {
@@ -75,7 +75,7 @@ class _BottomNavigationBar1State extends State<BottomNavigationBar1> {
                 print(_currentIndex);
               });
             },
-            items: [
+            items: const [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
                 label: 'Home',

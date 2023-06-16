@@ -31,9 +31,9 @@ class Mydrawer extends StatelessWidget {
                           children: [
                             CircleAvatar(
                               backgroundColor: Colors.white,
+                              radius: 25,
                               child: Text("A",
                                 style: TextStyle(fontSize: 30.sp, color: Colors.black),),
-                              radius: 25,
                             ),
                             SizedBox(width: 17.w),
                             Column(
@@ -81,7 +81,7 @@ class Mydrawer extends StatelessWidget {
                     ),
                     title: const Text('Your Earning'),
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>MyEarnings()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const EarningsView()));
                     },
                   ),
                   ListTile(
@@ -91,7 +91,7 @@ class Mydrawer extends StatelessWidget {
                       ),
                       title: const Text('WorkDone'),
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: ((context)=>BeforeWorkPage())));
+                        Navigator.push(context, MaterialPageRoute(builder: ((context)=>const BeforeWorkView())));
                       }),
                   ListTile(
                     leading: const Icon(

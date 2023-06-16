@@ -2,20 +2,20 @@ import 'dart:math';
 
 import '../../Helpers/import.dart';
 
-class BookingConfirmation extends StatefulWidget {
-  const BookingConfirmation({Key? key}) : super(key: key);
+class BookingConfirmationView extends StatefulWidget {
+  const BookingConfirmationView({Key? key}) : super(key: key);
 
   @override
-  State<BookingConfirmation> createState() => _BookingConfirmationState();
+  State<BookingConfirmationView> createState() => BookingConfirmationViewState();
 }
 
-class _BookingConfirmationState extends State<BookingConfirmation> {
+class BookingConfirmationViewState extends State<BookingConfirmationView> {
   late ConfettiController _confettiController;
 
   @override
   void initState() {
     super.initState();
-    _confettiController = ConfettiController(duration: Duration(seconds: 3));
+    _confettiController = ConfettiController(duration: const Duration(seconds: 3));
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _confettiController.play();
     });
@@ -41,15 +41,15 @@ class _BookingConfirmationState extends State<BookingConfirmation> {
                     confettiController: _confettiController,
                     blastDirectionality: BlastDirectionality.explosive,
                     shouldLoop: false,
-                    colors: [Colors.orange, Colors.blue, Colors.green,Colors.red,Colors.yellow],
+                    colors: const [Colors.orange, Colors.blue, Colors.green,Colors.red,Colors.yellow],
                     gravity: 0.3,
                     numberOfParticles:20,
-                    maximumSize: Size(10, 10),
-                    minimumSize: Size(1,1),
+                    maximumSize: const Size(10, 10),
+                    minimumSize: const Size(1,1),
                     child: Image.asset('images/check4.jpeg',scale: 2,),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30.0,vertical: 10),
+               const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30.0,vertical: 10),
                   child: Text('Your Appoinment Booked Successfully',
                     style: TextStyle(color: Colors.green,fontSize: 30,fontWeight: FontWeight.w600),
                     textAlign: TextAlign.center,
@@ -60,17 +60,17 @@ class _BookingConfirmationState extends State<BookingConfirmation> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Booking Details',
+                      const Text('Booking Details',
                         style: TextStyle(color: Colors.black,fontSize: 27,fontWeight: FontWeight.w500),),
                       ConfettiWidget(
                           confettiController: _confettiController,
                           blastDirectionality: BlastDirectionality.explosive,
                           shouldLoop: false,
-                          colors: [Colors.orange, Colors.blue, Colors.green,Colors.red,Colors.yellow],
+                          colors: const [Colors.orange, Colors.blue, Colors.green,Colors.red,Colors.yellow],
                           gravity: 0.3,
                           numberOfParticles:15,
-                         maximumSize: Size(10, 10),
-                          minimumSize: Size(1,1),
+                         maximumSize: const Size(10, 10),
+                          minimumSize:const  Size(1,1),
 
                       ),
                     ],
@@ -80,7 +80,7 @@ class _BookingConfirmationState extends State<BookingConfirmation> {
                   textAlign: TextAlign.center,
                   text: TextSpan(
                       style: TextStyle(color: Colors.grey.shade600,fontSize: 17),
-                      children: [
+                      children: const [
                         TextSpan(text: 'Booking ID : 9132948425\n'),
                         TextSpan(text: 'Booking Date : 19/12/2023\n'),
                         TextSpan(text: 'Contact Us : 1234567891\n'),
@@ -102,7 +102,7 @@ class _BookingConfirmationState extends State<BookingConfirmation> {
                     Size(230.w, 52.h),
                   ),
                 ),
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.arrow_back),
@@ -118,11 +118,11 @@ class _BookingConfirmationState extends State<BookingConfirmation> {
               confettiController: _confettiController,
               blastDirectionality: BlastDirectionality.explosive,
               shouldLoop: true,
-              colors: [Colors.orange, Colors.blue, Colors.green,Colors.red,Colors.yellow],
+              colors: const [Colors.orange, Colors.blue, Colors.green,Colors.red,Colors.yellow],
               gravity: 0.3,
               numberOfParticles:15,
-              maximumSize: Size(10, 10),
-              minimumSize: Size(1,1),
+              maximumSize: const Size(10, 10),
+              minimumSize: const Size(1,1),
             ),
           ),
           Align(
@@ -131,11 +131,11 @@ class _BookingConfirmationState extends State<BookingConfirmation> {
               confettiController: _confettiController,
               blastDirectionality: BlastDirectionality.explosive,
               shouldLoop: false,
-              colors: [Colors.orange, Colors.blue, Colors.green,Colors.red,Colors.yellow],
+              colors: const [Colors.orange, Colors.blue, Colors.green,Colors.red,Colors.yellow],
               gravity: 0.3,
               numberOfParticles:15,
-              maximumSize: Size(10, 10),
-              minimumSize: Size(1,1),
+              maximumSize: const Size(10, 10),
+              minimumSize: const Size(1,1),
             ),
           ),
 

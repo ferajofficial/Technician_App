@@ -1,19 +1,13 @@
-
-
-
-
 import '../../Helpers/import.dart';
 
-
-class AfterWorkPage extends StatefulWidget {
-  const AfterWorkPage({Key? key}) : super(key: key);
+class AfterWorkView extends StatefulWidget {
+  const AfterWorkView({Key? key}) : super(key: key);
 
   @override
-  State<AfterWorkPage> createState() => _AfterWorkPageState();
+  State<AfterWorkView> createState() => AfterWorkViewState();
 }
 
-class _AfterWorkPageState extends State<AfterWorkPage> {
-
+class AfterWorkViewState extends State<AfterWorkView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,45 +16,53 @@ class _AfterWorkPageState extends State<AfterWorkPage> {
         elevation: 0,
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black, size: 30,),
-          onPressed: (){
+          icon:const Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+            size: 30,
+          ),
+          onPressed: () {
             Navigator.pop(context);
           },
         ),
       ),
-      body: Container(
+      body: SizedBox(
         width: MediaQuery.of(context).size.width,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 15.0),
-              child: Text('After work video',
-                style: TextStyle(color: Colors.white,fontSize: 27,fontWeight: FontWeight.w500),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 15.0),
+              child: Text(
+                'After work video',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 27,
+                    fontWeight: FontWeight.w500),
               ),
             ),
-            VideoUpload(),
-            SizedBox(height: 50.h,),
+            const VideoUploadView(),
+            SizedBox(
+              height: 50.h,
+            ),
             Container(
               height: 35.h,
-              width:100.w,
+              width: 100.w,
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10)
-              ),
+                  color: Colors.white, borderRadius: BorderRadius.circular(10)),
               child: TextButton(
-                  onPressed: (){
-                    // Navigator.push(context, MaterialPageRoute(builder: ((context)=>MyPhone())));
-                  },
-                  child: Text('Next',
-                    style: TextStyle(color: Colors.black,fontSize: 18),
-                  ),
+                onPressed: () {
+                  // Navigator.push(context, MaterialPageRoute(builder: ((context)=>MyPhone())));
+                },
+                child: const Text(
+                  'Next',
+                  style: TextStyle(color: Colors.black, fontSize: 18),
+                ),
               ),
             ),
           ],
         ),
       ),
-
     );
   }
 }
