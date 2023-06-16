@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:repairs_duniya_s/Helpers/import.dart';
 
 void main() {
