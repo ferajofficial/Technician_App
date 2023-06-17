@@ -1,3 +1,12 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:repairs_duniya_s/Screen_page/IdentityProofPage/chargesCollected.dart';
+import 'package:repairs_duniya_s/Screen_page/IdentityProofPage/identityProof.dart';
+// import 'package:repairs_duniya_s/Screen_page/MyEarnings/my_earnings.dart';
+// import 'package:repairs_duniya_s/Screen_page/UploadVideoPages/before_work_page.dart';
+// import 'package:repairs_duniya_s/Screen_page/WelcomePage/welcom_page.dart';
+// import 'package:repairs_duniya_s/bottomNavigationBar.dart';
+
 
 
 // function to trigger app build
@@ -91,7 +100,8 @@ class Mydrawer extends StatelessWidget {
                       ),
                       title: const Text('WorkDone'),
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: ((context)=>const BeforeWorkView())));
+                        Navigator.push(context, MaterialPageRoute(builder: ((context)=>const IdentityProof())));
+                        //Navigator.push(context, MaterialPageRoute(builder: ((context)=>const BeforeWorkView())));
                       }),
                   ListTile(
                     leading: const Icon(

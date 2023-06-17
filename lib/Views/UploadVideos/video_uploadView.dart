@@ -89,34 +89,37 @@ class VideoUploadViewState extends State<VideoUploadView> {
           },
         );
       },
-      child: Container(
-        width: 200.0,
-        height: 200.0,
-        decoration: BoxDecoration(
-            color: Colors.black,
-            borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: Colors.white)
-        ),
-        child: _videoFile == null
-            ? Icon(
-          Icons.video_call,
-          color: Colors.grey[800],
-          size: 80.0,
-        )
-            : FutureBuilder<void>(
-          future: _initializeVideoPlayerFuture,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const CircularProgressIndicator();
-            } else if (snapshot.hasError) {
-              return Text('Error: ${snapshot.error}',style: const TextStyle(color: Colors.red),);
-            } else {
-              return AspectRatio(
-                aspectRatio: _videoPlayerController!.value.aspectRatio,
-                child: VideoPlayer(_videoPlayerController!),
-              );
-            }
-          },
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
+        child: Container(
+          width: 200.0,
+          height: 200.0,
+          decoration: BoxDecoration(
+              color: Colors.black,
+              borderRadius: BorderRadius.circular(10.0),
+              border: Border.all(color: Colors.white)
+          ),
+          child: _videoFile == null
+              ? Icon(
+            Icons.video_call,
+            color: Colors.grey[800],
+            size: 80.0,
+          )
+              : FutureBuilder<void>(
+            future: _initializeVideoPlayerFuture,
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const CircularProgressIndicator();
+              } else if (snapshot.hasError) {
+                return Text('Error: ${snapshot.error}',style: const TextStyle(color: Colors.red),);
+              } else {
+                return AspectRatio(
+                  aspectRatio: _videoPlayerController!.value.aspectRatio,
+                  child: VideoPlayer(_videoPlayerController!),
+                );
+              }
+            },
+          ),
         ),
       ),
     );

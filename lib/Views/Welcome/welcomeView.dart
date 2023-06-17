@@ -20,7 +20,7 @@ class WelcomeView extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CircleAvatar(backgroundImage: AssetImage('images/logo.jpeg'),radius: 25,),
+                      CircleAvatar(backgroundImage: AssetImage('assets/images/logo.jpeg'),radius: 25,),
                       Text(' Repairs Duniya',
                         style: TextStyle(fontSize: 29.sp,fontWeight: FontWeight.w700),
                       ),
@@ -29,7 +29,7 @@ class WelcomeView extends StatelessWidget {
                 ),
                 Align(
                     alignment: Alignment.bottomCenter,
-                    child: Image.asset('images/man.png',height: 240.h,))
+                    child: Image.asset('assets/images/man.png',height: 240.h,))
               ],
             ),
           ),

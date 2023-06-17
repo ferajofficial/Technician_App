@@ -53,7 +53,7 @@ class HomeViewState extends State<HomeView> {
               fontWeight: FontWeight.w600,
               color: Colors.white),
         ),
-        Image.asset('images/home_image.jpeg')
+        Image.asset('assets/images/home_image.jpeg')
       ],
     );
   }

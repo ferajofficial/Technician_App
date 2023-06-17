@@ -26,7 +26,7 @@ class RewardViewState extends State<RewardView> {
         SizedBox(
           height: 40.h,
         ),
-        Image.asset('images/home_image.jpeg')
+        Image.asset('assets/images/home_image.jpeg')
       ],
     );
   }

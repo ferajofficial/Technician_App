@@ -31,7 +31,7 @@ class _MyPhoneState extends State<MyPhone> {
           Row(
             children: [
               Image.asset(
-                'images/logo_dark.png',
+                'assets/images/logo_dark.png',
                 scale: 1.6,
               ),
               Text(' Repairs\n Duniya',

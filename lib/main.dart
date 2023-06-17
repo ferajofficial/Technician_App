@@ -1,5 +1,3 @@
-
-
 import 'package:repairs_duniya_s/Helpers/import.dart';
 
 void main() {
@@ -11,13 +9,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      builder: (context, index) {
-        return const MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: WelcomeView(),
-        );
-      },
+    return ScreenUtilInit(builder: (context,index){
+      return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: WelcomeView(),
+      );
+    },
+
     );
   }
 }

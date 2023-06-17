@@ -27,7 +27,6 @@ export 'package:flutter/rendering.dart';
 
 export 'package:repairs_duniya_s/Views/Login/phoneView.dart';
 
-export '../../Utilities/image_uploadView.dart';
 export 'package:confetti/confetti.dart';
 
 
@@ -42,4 +41,9 @@ export'package:repairs_duniya_s/Views/Login/otpView.dart';
 
 
 export 'package:pinput/pinput.dart';
+
+export '../Screen_page/IdentityProofPage/chargesCollected.dart';
+export '../Screen_page/IdentityProofPage/imageUpload.dart';
+export '../Screen_page/IdentityProofPage/identityProof.dart';
+
 
