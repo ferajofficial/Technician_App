@@ -452,30 +452,36 @@ class _SelectServicesViewState extends State<SelectServicesView> {
                 ),
               ],
             ),
-            // Align(
-            //   alignment: Alignment.center,
-            //   child: FilterChip(
-            //     elevation: 3,
-            //     label: Text(
-            //       "Others",
-            //       style: GoogleFonts.poppins(
-            //           textStyle: TextStyle(
-            //         fontSize: 16.5.sp,
-            //         fontWeight: FontWeight.w400,
-            //         color: isSelectedList[12] ? Colors.green : Colors.blue,
-            //       )),
-            //     ),
-            //     selected: isSelectedList[12],
-            //     onSelected: (bool value) {
-            //       setState(() {
-            //         isSelectedList[12] = value;
-            //       });
-            //     },
-            //     backgroundColor: Colors.blue[50],
-            //     selectedColor: Colors.green[100],
-            //     checkmarkColor: Colors.white,
-            //   ),
-            // ),
+            Align(
+              alignment: Alignment.center,
+              child: FilterChip(
+                elevation: 3,
+                label: Text(
+                  "Unisex Salon",
+                  style: GoogleFonts.poppins(
+                      textStyle: TextStyle(
+                    fontSize: 16.5.sp,
+                    fontWeight: FontWeight.w400,
+                    color: isSelectedList[12] ? Colors.green : Colors.blue,
+                  )),
+                ),
+                selected: isSelectedList[12],
+                onSelected: (bool value) {
+                  setState(() {
+                    isSelectedList[12] = value;
+                  });
+                },
+                avatar: CircleAvatar(
+                  // radius: 50,
+                  backgroundColor: Colors.transparent,
+                  backgroundImage:
+                      AssetImage("assets/images/appliences/salon.png"),
+                ),
+                backgroundColor: Colors.blue[50],
+                selectedColor: Colors.green[100],
+                checkmarkColor: Colors.white,
+              ),
+            ),
             // Wrap(
             //   spacing: 8,
             //   direction: Axis.horizontal,
