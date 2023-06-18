@@ -42,8 +42,9 @@ export'package:repairs_duniya_s/Views/Login/otpView.dart';
 
 export 'package:pinput/pinput.dart';
 
-export '../Screen_page/IdentityProofPage/chargesCollected.dart';
-export '../Screen_page/IdentityProofPage/imageUpload.dart';
-export '../Screen_page/IdentityProofPage/identityProof.dart';
+export '../Views/CollectedCharges/chargesCollected.dart';
+export '../Views/UploadImages/imageUpload.dart';
+// export '../Screen_page/IdentityProofPage/identityProof.dart';
 
 
+export 'package:repairs_duniya_s/Views/IdentityProof/idproofView.dart';

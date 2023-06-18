@@ -1,3 +1,5 @@
+import 'package:repairs_duniya_s/Views/Select_Services/servicesViews.dart';
+
 import '../../Helpers/import.dart';
 
 final TextEditingController mobileController = TextEditingController();
@@ -94,7 +96,7 @@ class OtpViewState extends State<OtpView> {
                       color: Colors.grey, fontWeight: FontWeight.w500),
                 ),
                 const Text(
-                  '00:18',
+                  '60:00',
                   style: TextStyle(
                       color: Colors.grey, fontWeight: FontWeight.w500),
                 ),
@@ -111,7 +113,7 @@ class OtpViewState extends State<OtpView> {
                             context,
                             MaterialPageRoute(
                                 builder: ((context) =>
-                                    BottomNavigationBar1())));
+                                    const SelectServicesView())));
                       },
                       child: const Text(
                         'Continue',

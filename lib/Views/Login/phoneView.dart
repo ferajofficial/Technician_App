@@ -1,13 +1,13 @@
 import '../../Helpers/import.dart';
 
-class MyPhone extends StatefulWidget {
-  const MyPhone({Key? key}) : super(key: key);
+class PhoneView extends StatefulWidget {
+  const PhoneView({Key? key}) : super(key: key);
 
   @override
-  State<MyPhone> createState() => _MyPhoneState();
+  State<PhoneView> createState() => PhoneViewState();
 }
 
-class _MyPhoneState extends State<MyPhone> {
+class PhoneViewState extends State<PhoneView> {
   final TextEditingController mobileController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -25,8 +25,8 @@ class _MyPhoneState extends State<MyPhone> {
             decoration: const BoxDecoration(
                 color: Colors.black,
                 borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(40),
-                    bottomLeft: Radius.circular(40))),
+                    bottomRight: Radius.circular(25),
+                    bottomLeft: Radius.circular(25))),
           ),
           Row(
             children: [

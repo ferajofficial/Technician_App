@@ -1,15 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:repairs_duniya_s/Screen_page/IdentityProofPage/chargesCollected.dart';
-import 'package:repairs_duniya_s/Screen_page/IdentityProofPage/identityProof.dart';
-// import 'package:repairs_duniya_s/Screen_page/MyEarnings/my_earnings.dart';
-// import 'package:repairs_duniya_s/Screen_page/UploadVideoPages/before_work_page.dart';
-// import 'package:repairs_duniya_s/Screen_page/WelcomePage/welcom_page.dart';
-// import 'package:repairs_duniya_s/bottomNavigationBar.dart';
 
 
-
-// function to trigger app build
 import '../Helpers/import.dart';
 
 class Mydrawer extends StatelessWidget {
@@ -25,41 +15,64 @@ class Mydrawer extends StatelessWidget {
             padding: const EdgeInsets.all(0),
             children: [
               Container(
-                color: Colors.black,
-                child:  DrawerHeader(
-                  child: SingleChildScrollView(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Welcome Partner",
-                          style: TextStyle(fontSize: 22.sp, color: Colors.white,),
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                  ),
+                  color: Colors.black,
+                ),
+                child: DrawerHeader(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Reapirs Duniya Welcomes You",
+                          style: TextStyle(
+                            fontSize: 20.sp,
+                            color: Colors.white,
+                          ),
                           textAlign: TextAlign.center,
                         ),
-                        SizedBox(height: 45.h),
-                        Row(
-                          children: [
-                            CircleAvatar(
-                              backgroundColor: Colors.white,
-                              radius: 25,
-                              child: Text("A",
-                                style: TextStyle(fontSize: 30.sp, color: Colors.black),),
+                      ),
+                      SizedBox(height: 35.h),
+                      Row(
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: Colors.white,
+                            radius: 25,
+                            child: Text(
+                              "A",
+                              style: TextStyle(
+                                  fontSize: 30.sp, color: Colors.black),
                             ),
-                            SizedBox(width: 17.w),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text("Name",
-                                  style: TextStyle(fontSize: 18.sp, color: Colors.white),),
-                                Text(
-                                  "a@gmail.com",
-                                  style: TextStyle(fontSize: 15.sp, color: Colors.white,fontWeight: FontWeight.normal),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                          ),
+                          SizedBox(width: 17.w),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Name",
+                                style: TextStyle(
+                                    fontSize: 18.sp, color: Colors.white),
+                              ),
+                              Text(
+                                "a@gmail.com",
+                                style: TextStyle(
+                                    fontSize: 15.sp,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.normal),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -80,7 +93,11 @@ class Mydrawer extends StatelessWidget {
                     ),
                     title: const Text('Rewards/Bonus'),
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavigationBar1(num:1)));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const BottomNavBarView(num: 1)));
                     },
                   ),
                   ListTile(
@@ -90,7 +107,10 @@ class Mydrawer extends StatelessWidget {
                     ),
                     title: const Text('Your Earning'),
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const EarningsView()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const EarningsView()));
                     },
                   ),
                   ListTile(
@@ -100,7 +120,11 @@ class Mydrawer extends StatelessWidget {
                       ),
                       title: const Text('WorkDone'),
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: ((context)=>const IdentityProof())));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) =>
+                                    const IdentityProofView())));
                         //Navigator.push(context, MaterialPageRoute(builder: ((context)=>const BeforeWorkView())));
                       }),
                   ListTile(
@@ -118,16 +142,18 @@ class Mydrawer extends StatelessWidget {
             ],
           ),
           Positioned(
-            left: 150.w,
-            top: 110.h,
-            right: 10.w,
+            left: 250.w,
+            top: 08.h,
+            //right: 10.w,
             child: IconButton(
               icon: const Icon(
                 Icons.arrow_forward_ios,
                 color: Colors.white,
                 size: 20,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
           ),
         ],

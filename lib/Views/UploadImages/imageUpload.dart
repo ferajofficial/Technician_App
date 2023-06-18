@@ -6,14 +6,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 //import '../Helpers/import.dart';
 
-class ImageUpload extends StatefulWidget {
-  const ImageUpload({Key? key}) : super(key: key);
+class ImageUploadView extends StatefulWidget {
+  const ImageUploadView({Key? key}) : super(key: key);
 
   @override
-  State<ImageUpload> createState() => _ImageUploadState();
+  State<ImageUploadView> createState() => ImageUploadViewState();
 }
 
-class _ImageUploadState extends State<ImageUpload> {
+class ImageUploadViewState extends State<ImageUploadView> {
   File? _image;
   final picker = ImagePicker();
 
@@ -33,20 +33,20 @@ class _ImageUploadState extends State<ImageUpload> {
             context: context,
             builder: (BuildContext context) {
               return AlertDialog(
-                title: Text('Upload Video'),
+                title: const Text('Upload Image'),
                 content: SingleChildScrollView(
                   child: ListBody(
                     children: <Widget>[
                       GestureDetector(
-                        child: Text('Camera'),
+                        child: const Text('Camera'),
                         onTap: () {
                             _pickImage(ImageSource.camera);
                           Navigator.of(context).pop();
                         },
                       ),
-                      Padding(padding: EdgeInsets.all(8.0)),
+                     const  Padding(padding: EdgeInsets.all(8.0)),
                       GestureDetector(
-                        child: Text('Gallery'),
+                        child: const Text('Gallery'),
                         onTap: () {
                           _pickImage(ImageSource.gallery);
                           Navigator.of(context).pop();
@@ -69,7 +69,7 @@ class _ImageUploadState extends State<ImageUpload> {
           ),
           child:  _image != null
               ? Image.file(_image!, fit: BoxFit.cover,)
-              : Icon(Icons.add,color: Colors.white,size: 50,)
+              : const Icon(Icons.add,color: Colors.white,size: 50,)
 
         )
     );

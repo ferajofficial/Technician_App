@@ -9,13 +9,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(builder: (context,index){
-      return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: WelcomeView(),
-      );
-    },
-
+    return ScreenUtilInit(
+      builder: (context, index) {
+        return const MaterialApp(
+            debugShowCheckedModeBanner: false, home: WelcomeView()
+            // const BottomNavBarView(),
+            );
+      },
     );
   }
 }

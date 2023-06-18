@@ -1,19 +1,17 @@
 import 'package:repairs_duniya_s/Helpers/import.dart';
 
-
-
-class BottomNavigationBar1 extends StatefulWidget {
+class BottomNavBarView extends StatefulWidget {
   final int? num;
-  BottomNavigationBar1({this.num});
+  const BottomNavBarView({super.key, this.num});
 
   @override
-  State<BottomNavigationBar1> createState() => _BottomNavigationBar1State();
+  State<BottomNavBarView> createState() => BottomNavBarViewState();
 }
 
-class _BottomNavigationBar1State extends State<BottomNavigationBar1> {
+class BottomNavBarViewState extends State<BottomNavBarView> {
   int _currentIndex = 0;
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final List<Widget> _pagesfooter=[
+  final List<Widget> _pagesfooter = [
     const HomeView(),
     const RewardView(),
     const ProfileView()
@@ -21,12 +19,13 @@ class _BottomNavigationBar1State extends State<BottomNavigationBar1> {
 
   @override
   void initState() {
-    final num=widget.num;
-    if(num!=null){
-      _currentIndex=num;
+    final num = widget.num;
+    if (num != null) {
+      _currentIndex = num;
     }
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,8 +38,12 @@ class _BottomNavigationBar1State extends State<BottomNavigationBar1> {
         elevation: 0,
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: const Icon(Icons.menu,color: Colors.black,size: 30,),
-          onPressed: (){
+          icon: const Icon(
+            Icons.menu,
+            color: Colors.black,
+            size: 30,
+          ),
+          onPressed: () {
             if (scaffoldKey.currentState!.isDrawerOpen) {
               scaffoldKey.currentState!.closeDrawer();
               //close drawer, if drawer is open
@@ -55,40 +58,38 @@ class _BottomNavigationBar1State extends State<BottomNavigationBar1> {
         children: [
           Expanded(
             child: PageView(
-              children: [
-                _pagesfooter[_currentIndex]
-              ],
+              children: [_pagesfooter[_currentIndex]],
             ),
           ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-          elevation: 0,
-          backgroundColor: Colors.white,
-          selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.grey,
-          selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
-          currentIndex: _currentIndex,
-          onTap: (int index) {
-              setState(() {
-                _currentIndex = index;
-                print(_currentIndex);
-              });
-            },
-            items: const [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Home',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.card_giftcard),
-                label: 'Rewards',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                label: 'Profile',
-              ),
-            ],
+        elevation: 0,
+        backgroundColor: Colors.white,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
+        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
+        currentIndex: _currentIndex,
+        onTap: (int index) {
+          setState(() {
+            _currentIndex = index;
+            print(_currentIndex);
+          });
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.card_giftcard),
+            label: 'Rewards',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+        ],
       ),
     );
   }

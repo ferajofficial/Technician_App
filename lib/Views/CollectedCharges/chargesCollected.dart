@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import '../../Helpers/import.dart';
+
 class ChargesCollected extends StatefulWidget {
   const ChargesCollected({Key? key}) : super(key: key);
 
@@ -37,7 +37,7 @@ class _ChargesCollectedState extends State<ChargesCollected> {
         backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width,
           child: Form(
             key: _formKey,
@@ -56,25 +56,25 @@ class _ChargesCollectedState extends State<ChargesCollected> {
                 ),
                 Container(
                   width: 300.w,
-                  padding: EdgeInsets.only(top: 30),
+                  padding: const EdgeInsets.only(top: 30),
                   child: TextFormField(
                     keyboardType: TextInputType.number,
                     controller: totalController,
-                    style: TextStyle(color: Colors.black),
+                    style: const TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       fillColor: Colors.white,
                       filled: true,
                       labelText: 'Total collected ',
                       labelStyle: const TextStyle(color: Colors.black),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.black,
                           width: 1,
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide:const  BorderSide(
                           color: Colors.black,
                           width: 2,
                         ),
@@ -85,32 +85,34 @@ class _ChargesCollectedState extends State<ChargesCollected> {
                       ),
                     ),
                     validator: (value){
-                      if(value==null||value.isEmpty )
+                      if(value==null||value.isEmpty ) {
                         return 'Please enter the total collected amount';
+                      }
+                      return null;
                     },
                   ),
                 ),
                 SizedBox(height: 30.h,),
-                Container(
+                SizedBox(
                   width: 300.w,
                   child: TextFormField(
                     keyboardType: TextInputType.number,
                     controller: chargeController,
-                    style: TextStyle(color: Colors.black),
+                    style: const TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       fillColor: Colors.white,
                       filled: true,
                       labelText: 'Spare parts charges',
                       labelStyle: const TextStyle(color: Colors.black),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.black,
                           width: 1,
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.black,
                           width: 2,
                         ),
@@ -121,8 +123,10 @@ class _ChargesCollectedState extends State<ChargesCollected> {
                       ),
                     ),
                     validator: (value){
-                      if(value==null || value.isEmpty)
+                      if(value==null || value.isEmpty) {
                         return 'Please enter the spare parts charges';
+                      }
+                      return null;
                     },
                   ),
                 ),
@@ -135,32 +139,34 @@ class _ChargesCollectedState extends State<ChargesCollected> {
                     maxLines: 200,
                     controller: sparePartsController,
                     keyboardType: TextInputType.multiline,
-                    style: TextStyle(color: Colors.black),
+                    style: const TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       hintMaxLines: 2,
                       hintText: 'Ex: Coil,Capacitor,etc...',
                       labelText: 'Spare parts',
                       labelStyle: const TextStyle(color: Colors.black,fontSize: 17),
                       alignLabelWithHint: true,
-                      hintStyle: TextStyle(color: Colors.black, fontSize: 15, fontStyle: FontStyle.italic,),
+                      hintStyle: const TextStyle(color: Colors.black, fontSize: 15, fontStyle: FontStyle.italic,),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(width: 1, color: Colors.black),
+                        borderSide: const BorderSide(width: 1, color: Colors.black),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(width: 2, color: Colors.black),
+                        borderSide: const BorderSide(width: 2, color: Colors.black),
                       ),
                     ),
                     validator: (value){
-                      if(value==null || value.isEmpty)
+                      if(value==null || value.isEmpty) {
                         return 'Please enter the spare parts';
+                      }
+                      return null;
                     },
                   ),
                 ),
                 SizedBox(height: 50.h,),
                 Container(
-                  margin: EdgeInsets.only(top: 20),
+                  margin: const EdgeInsets.only(top: 20),
                   height: 35.h,
                   width:130.w,
                   decoration: BoxDecoration(
@@ -171,7 +177,7 @@ class _ChargesCollectedState extends State<ChargesCollected> {
                     onPressed: (){
                       _submitForm();
                     },
-                    child: Text('Submit',
+                    child: const Text('Submit',
                       style: TextStyle(color: Colors.white,fontSize: 18),
                     ),
                   ),
