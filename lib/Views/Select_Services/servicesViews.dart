@@ -55,14 +55,14 @@ class _SelectServicesViewState extends State<SelectServicesView> {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: SizedBox(
-                height: 50.h,
+                height: 40.h,
                 child: TextField(
                   textAlign: TextAlign.center,
                   decoration: InputDecoration(
                     hintText: "Search Services",
                     hintStyle: GoogleFonts.poppins(
                         textStyle: TextStyle(
-                      fontSize: 18.sp,
+                      fontSize: 16.sp,
                       color: Colors.black38,
                       fontWeight: FontWeight.w500,
                     )),
@@ -471,7 +471,7 @@ class _SelectServicesViewState extends State<SelectServicesView> {
                     isSelectedList[12] = value;
                   });
                 },
-                avatar: CircleAvatar(
+                avatar: const CircleAvatar(
                   // radius: 50,
                   backgroundColor: Colors.transparent,
                   backgroundImage:
@@ -491,12 +491,12 @@ class _SelectServicesViewState extends State<SelectServicesView> {
         ),
       )),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.only(bottom: 30.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             SizedBox(
-              height: 45.h,
+              height: 40.h,
               width: 130.w,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -516,7 +516,7 @@ class _SelectServicesViewState extends State<SelectServicesView> {
                   style: GoogleFonts.poppins(
                     textStyle: TextStyle(
                         color: Colors.white,
-                        fontSize: 20.sp,
+                        fontSize: 18.sp,
                         fontWeight: FontWeight.w600),
                   ),
                 ),

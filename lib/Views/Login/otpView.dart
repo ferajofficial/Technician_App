@@ -124,14 +124,17 @@ class OtpViewState extends State<OtpView> {
             ),
           ),
           Positioned(
-              bottom: 20,
+              bottom: 35,
+              left: 20,
               child: IconButton(
                 icon: const Icon(
                   Icons.arrow_back,
                   color: Colors.black,
                   size: 40,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
               ))
         ],
       ),

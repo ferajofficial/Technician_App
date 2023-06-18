@@ -122,7 +122,7 @@ class _IdentityProofViewState extends State<IdentityProofView> {
               height: 70.h,
             ),
             SizedBox(
-              height: 45.h,
+              height: 40.h,
               width: 130.w,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(

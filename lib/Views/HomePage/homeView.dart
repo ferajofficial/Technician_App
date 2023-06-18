@@ -39,8 +39,8 @@ class HomeViewState extends State<HomeView> {
                           const SizedBox(height: 16),
                           Text(
                             'To get more works subscribe to our Gold plan',
-                            style: GoogleFonts.italiana(
-                                fontSize: 15.sp,
+                            style: GoogleFonts.poppins(
+                                fontSize: 12.5.sp,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.white),
                           ),

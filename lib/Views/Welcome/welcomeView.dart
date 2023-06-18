@@ -21,7 +21,7 @@ class WelcomeView extends StatelessWidget {
                     children: [
                       const CircleAvatar(
                         backgroundImage: AssetImage('assets/images/logo.jpeg'),
-                        radius: 25,
+                        radius: 35,
                       ),
                       Text(
                         ' Repairs Duniya',
@@ -56,32 +56,36 @@ class WelcomeView extends StatelessWidget {
                 children: [
                   Container(
                     alignment: Alignment.center,
-                    child: RichText(
-                      text: TextSpan(
-                          style: TextStyle(
-                              fontSize: 20.sp, fontWeight: FontWeight.w500),
-                          children: [
-                            const TextSpan(
-                                text: '\u2022 Earn Upto 28,000 Per Month\n'),
-                            WidgetSpan(
-                                child: SizedBox(
-                              height: 29.h,
-                            )),
-                            const TextSpan(
-                                text: '\u2022 Get works in your area\n'),
-                            WidgetSpan(
-                                child: SizedBox(
-                              height: 29.h,
-                            )),
-                            const TextSpan(text: '\u2022 Earn more profits\n'),
-                            WidgetSpan(
-                                child: SizedBox(
-                              height: 29.h,
-                            )),
-                            const TextSpan(
-                                text:
-                                    '\u2022 Earn rewards and bonus upto 4000\n'),
-                          ]),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 15.0),
+                      child: RichText(
+                        text: TextSpan(
+                            style: TextStyle(
+                                fontSize: 19.sp, fontWeight: FontWeight.w500),
+                            children: [
+                              const TextSpan(
+                                  text: '\u2022 Earn Upto 28,000 Per Month\n'),
+                              WidgetSpan(
+                                  child: SizedBox(
+                                height: 29.h,
+                              )),
+                              const TextSpan(
+                                  text: '\u2022 Get works in your area\n'),
+                              WidgetSpan(
+                                  child: SizedBox(
+                                height: 29.h,
+                              )),
+                              const TextSpan(
+                                  text: '\u2022 Earn more profits\n'),
+                              WidgetSpan(
+                                  child: SizedBox(
+                                height: 29.h,
+                              )),
+                              const TextSpan(
+                                  text:
+                                      '\u2022 Earn rewards and bonus upto 4000'),
+                            ]),
+                      ),
                     ),
                   ),
                   Align(
