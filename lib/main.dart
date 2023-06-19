@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return ScreenUtilInit(builder: (context,index){
       return MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -16,6 +17,15 @@ class MyApp extends StatelessWidget {
       );
     },
 
+=======
+    return ScreenUtilInit(
+      builder: (context, index) {
+        return const MaterialApp(
+            debugShowCheckedModeBanner: false, home: WelcomeView()
+            // const BottomNavBarView(),
+            );
+      },
+>>>>>>> 6f71788ffe7843ebb65d31399878bb7546be592b
     );
   }
 }

@@ -42,9 +42,15 @@ export'package:repairs_duniya_s/Views/Login/otpView.dart';
 
 export 'package:pinput/pinput.dart';
 
+<<<<<<< HEAD
 export '../Views/IdentityProof/identityProofView.dart';
 export '../Views/IdentityProof/imageUploadView.dart';
 export '../Views/ChargesCollected/chargesCollectedView.dart';
+=======
+export '../Views/CollectedCharges/chargesCollected.dart';
+export '../Views/UploadImages/imageUpload.dart';
+// export '../Screen_page/IdentityProofPage/identityProof.dart';
+>>>>>>> 6f71788ffe7843ebb65d31399878bb7546be592b
 
 export '../Views/MyBookings/customerDetailsView.dart';
 export '../Views/MyBookings/myBookingsView.dart';
@@ -54,4 +60,8 @@ export '../Views/MyBookings/urgentBookingView.dart';
 export '../Views/MyBookings/workDoneView.dart';
 export '../Views/MyBookings/rejectedView.dart';
 
+<<<<<<< HEAD
 export '../Views/BookingOtp/BookingOtpView.dart';
+=======
+export 'package:repairs_duniya_s/Views/IdentityProof/idproofView.dart';
+>>>>>>> 6f71788ffe7843ebb65d31399878bb7546be592b

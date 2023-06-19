@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6f71788ffe7843ebb65d31399878bb7546be592b
 import '../Helpers/import.dart';
 
 class Mydrawer extends StatelessWidget {
@@ -14,41 +17,61 @@ class Mydrawer extends StatelessWidget {
             padding: const EdgeInsets.all(0),
             children: [
               Container(
-                color: Colors.black,
-                child:  DrawerHeader(
-                  child: SingleChildScrollView(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Welcome Partner",
-                          style: TextStyle(fontSize: 22.sp, color: Colors.white,),
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                  ),
+                  color: Colors.black,
+                ),
+                child: DrawerHeader(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Reapirs Duniya Welcomes You !.",
+                          style: TextStyle(
+                            fontSize: 18.sp,
+                            color: Colors.white,
+                          ),
                           textAlign: TextAlign.center,
                         ),
-                        SizedBox(height: 45.h),
-                        Row(
-                          children: [
-                            CircleAvatar(
-                              backgroundColor: Colors.white,
-                              radius: 25,
-                              child: Text("A",
-                                style: TextStyle(fontSize: 30.sp, color: Colors.black),),
+                      ),
+                      SizedBox(height: 15.h),
+                      Row(
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: Colors.white,
+                            radius: 25,
+                            child: Text(
+                              "A",
+                              style: TextStyle(
+                                  fontSize: 30.sp, color: Colors.black),
                             ),
-                            SizedBox(width: 17.w),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text("Name",
-                                  style: TextStyle(fontSize: 18.sp, color: Colors.white),),
-                                Text(
-                                  "a@gmail.com",
-                                  style: TextStyle(fontSize: 15.sp, color: Colors.white,fontWeight: FontWeight.normal),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                          ),
+                          SizedBox(width: 17.w),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Name",
+                                style: TextStyle(
+                                    fontSize: 18.sp, color: Colors.white),
+                              ),
+                              Text(
+                                "a@gmail.com",
+                                style: TextStyle(
+                                    fontSize: 15.sp,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.normal),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -59,7 +82,11 @@ class Mydrawer extends StatelessWidget {
                       Icons.subscriptions_outlined,
                       color: Colors.black,
                     ),
-                    title: const Text('Subscription'),
+                    title: Text('Subscription',
+                        style: GoogleFonts.poppins(
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black)),
                     onTap: () {},
                   ),
                   ListTile(
@@ -67,19 +94,39 @@ class Mydrawer extends StatelessWidget {
                       Icons.card_giftcard,
                       color: Colors.black,
                     ),
-                    title: const Text('Rewards/Bonus'),
+                    title: Text(
+                      'Rewards/Bonus',
+                      style: GoogleFonts.poppins(
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
+                    ),
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavigationBar1(num:1)));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const BottomNavBarView(num: 1)));
                     },
                   ),
                   ListTile(
                     leading: const Icon(
                       Icons.attach_money,
+                      size: 30,
                       color: Colors.black,
                     ),
-                    title: const Text('Your Earning'),
+                    title: Text(
+                      'Your Earning',
+                      style: GoogleFonts.poppins(
+                        fontSize: 15.sp,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const EarningsView()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const EarningsView()));
                     },
                   ),
                   ListTile(
@@ -87,8 +134,24 @@ class Mydrawer extends StatelessWidget {
                         Icons.task_outlined,
                         color: Colors.black,
                       ),
-                      title: const Text('WorkDone'),
+                      title: Text(
+                        'WorkDone',
+                        style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black),
+                        ),
+                      ),
                       onTap: () {
+<<<<<<< HEAD
+=======
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) =>
+                                    const IdentityProofView())));
+>>>>>>> 6f71788ffe7843ebb65d31399878bb7546be592b
                         //Navigator.push(context, MaterialPageRoute(builder: ((context)=>const BeforeWorkView())));
                       }),
                   ListTile(
@@ -96,7 +159,15 @@ class Mydrawer extends StatelessWidget {
                       Icons.logout,
                       color: Colors.black,
                     ),
-                    title: const Text('Logout'),
+                    title: Text(
+                      'Logout',
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black),
+                      ),
+                    ),
                     onTap: () {
                       Navigator.pop(context);
                     },
@@ -106,16 +177,18 @@ class Mydrawer extends StatelessWidget {
             ],
           ),
           Positioned(
-            left: 150.w,
-            top: 110.h,
-            right: 10.w,
+            left: 200.w,
+            top: 25.h,
+            //right: 10.w,
             child: IconButton(
               icon: const Icon(
                 Icons.arrow_forward_ios,
                 color: Colors.white,
-                size: 20,
+                size: 25,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
           ),
         ],
