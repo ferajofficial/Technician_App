@@ -19,13 +19,11 @@ class _MyProfileState extends State<ProfileView> {
     emailController.dispose();
     super.dispose();
   }
-
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
       print('Form submitted');
     }
   }
-
   File? _image;
   final picker = ImagePicker();
 
@@ -50,7 +48,7 @@ class _MyProfileState extends State<ProfileView> {
         Align(
           alignment: Alignment.center,
           child: Container(
-            height: 400.h,
+            height: 430.h,
             width: 300.w,
             margin: const EdgeInsets.symmetric(horizontal: 30),
             decoration: BoxDecoration(
@@ -63,14 +61,12 @@ class _MyProfileState extends State<ProfileView> {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(top: 15.h, bottom: 5.h),
-                    child: Text(
+                    child: const Text(
                       'My Profile',
-                      style: GoogleFonts.poppins(
-                        textStyle: const TextStyle(
-                            color: Colors.black,
-                            fontSize: 27,
-                            fontWeight: FontWeight.w500),
-                      ),
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 27,
+                          fontWeight: FontWeight.w700),
                     ),
                   ),
                   GestureDetector(
@@ -79,20 +75,20 @@ class _MyProfileState extends State<ProfileView> {
                         context: context,
                         builder: (BuildContext context) {
                           return AlertDialog(
-                            title: const Text('Upload Image'),
+                            title: Text('Upload Image'),
                             content: SingleChildScrollView(
                               child: ListBody(
                                 children: <Widget>[
                                   GestureDetector(
-                                    child: const Text('Camera'),
+                                    child: Text('Camera'),
                                     onTap: () {
                                       _pickImage1(ImageSource.camera);
                                       Navigator.of(context).pop();
                                     },
                                   ),
-                                  const Padding(padding: EdgeInsets.all(8.0)),
+                                  Padding(padding: EdgeInsets.all(8.0)),
                                   GestureDetector(
-                                    child: const Text('Gallery'),
+                                    child: Text('Gallery'),
                                     onTap: () {
                                       _pickImage1(ImageSource.gallery);
                                       Navigator.of(context).pop();
@@ -106,10 +102,7 @@ class _MyProfileState extends State<ProfileView> {
                       );
                     },
                     child: CircleAvatar(
-                      backgroundImage: _image != null
-                          ? FileImage(_image!)
-                          : AssetImage('assets/images/profile.png')
-                              as ImageProvider<Object>,
+                      backgroundImage: _image != null ? FileImage(_image!) : AssetImage('assets/images/profile.png')as ImageProvider<Object>,
                       backgroundColor: Colors.transparent,
                       radius: 50,
                     ),
@@ -147,8 +140,8 @@ class _MyProfileState extends State<ProfileView> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty)
+                      validator: (value){
+                        if(value==null || value.isEmpty)
                           return 'please enter name';
                       },
                     ),
@@ -188,8 +181,8 @@ class _MyProfileState extends State<ProfileView> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty)
+                      validator: (value){
+                        if(value==null || value.isEmpty)
                           return 'please enter name';
                       },
                     ),
@@ -227,8 +220,8 @@ class _MyProfileState extends State<ProfileView> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty)
+                      validator: (value){
+                        if(value==null || value.isEmpty)
                           return 'please enter name';
                       },
                     ),
@@ -239,30 +232,22 @@ class _MyProfileState extends State<ProfileView> {
           ),
         ),
         Positioned(
-          top: 445.h,
+          top: 430.h,
           left: 120.w,
-          child: SizedBox(
+          child: Container(
             height: 40.h,
-            width: 130.w,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  elevation: 3,
-                  backgroundColor: Colors.black,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30))),
-              onPressed: () {
-                _submitForm();
-              },
-              child: Text(
-                'Next',
-                style: GoogleFonts.poppins(
-                  textStyle: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w600),
-                ),
-              ),
-            ),
+            width: 120.w,
+            margin: EdgeInsets.only(top: 80.h, bottom: 20.h),
+            decoration: BoxDecoration(
+                color: Colors.black, borderRadius: BorderRadius.circular(40)),
+            child: TextButton(
+                onPressed: () {
+                  _submitForm();
+                },
+                child: const Text(
+                  'Save',
+                  style: TextStyle(color: Colors.white, fontSize: 19),
+                )),
           ),
         ),
       ],

@@ -64,26 +64,9 @@ class HomeViewState extends State<HomeView> {
             ],
           ),
         ),
-<<<<<<< HEAD
-        Padding(
-          padding: const EdgeInsets.only(left: 20.0,top: 10),
-          child: Align(
-            alignment: Alignment.topLeft,
-            child: Text(
-              'Recent Bookings',
-              style: TextStyle(
-                  fontSize: 24.sp,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black),
-            ),
-          ),
-        ),
-        Image.asset('assets/images/home_image.jpeg')
-      ],
-=======
+
       ),
       // bottomNavigationBar: BottomNavBarView(),
->>>>>>> 6f71788ffe7843ebb65d31399878bb7546be592b
     );
   }
 }

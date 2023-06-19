@@ -1,16 +1,8 @@
-<<<<<<<< HEAD:lib/Views/ChargesCollected/chargesCollectedView.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 class ChargesCollectedView extends StatefulWidget {
   const ChargesCollectedView({Key? key}) : super(key: key);
-========
-
-import '../../Helpers/import.dart';
-
-class ChargesCollected extends StatefulWidget {
-  const ChargesCollected({Key? key}) : super(key: key);
->>>>>>>> 6f71788ffe7843ebb65d31399878bb7546be592b:lib/Views/CollectedCharges/chargesCollected.dart
 
   @override
   State<ChargesCollectedView> createState() => _ChargesCollectedViewState();

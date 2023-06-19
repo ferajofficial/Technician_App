@@ -10,17 +10,10 @@ class ImageUploadView extends StatefulWidget {
   const ImageUploadView({Key? key}) : super(key: key);
 
   @override
-<<<<<<<< HEAD:lib/Views/IdentityProof/imageUploadView.dart
   State<ImageUploadView> createState() => _ImageUploadViewState();
 }
 
 class _ImageUploadViewState extends State<ImageUploadView> {
-========
-  State<ImageUploadView> createState() => ImageUploadViewState();
-}
-
-class ImageUploadViewState extends State<ImageUploadView> {
->>>>>>>> 6f71788ffe7843ebb65d31399878bb7546be592b:lib/Views/UploadImages/imageUpload.dart
   File? _image;
   final picker = ImagePicker();
 

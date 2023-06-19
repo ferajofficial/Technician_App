@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 6f71788ffe7843ebb65d31399878bb7546be592b
 import '../Helpers/import.dart';
 
 class Mydrawer extends StatelessWidget {
@@ -143,17 +140,7 @@ class Mydrawer extends StatelessWidget {
                               color: Colors.black),
                         ),
                       ),
-                      onTap: () {
-<<<<<<< HEAD
-=======
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: ((context) =>
-                                    const IdentityProofView())));
->>>>>>> 6f71788ffe7843ebb65d31399878bb7546be592b
-                        //Navigator.push(context, MaterialPageRoute(builder: ((context)=>const BeforeWorkView())));
-                      }),
+                      onTap: () {}),
                   ListTile(
                     leading: const Icon(
                       Icons.logout,
