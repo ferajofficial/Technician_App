@@ -46,12 +46,18 @@ class HomeViewState extends State<HomeView> {
             ),
           ),
         ),
-        Text(
-          'Recent Bookings',
-          style: TextStyle(
-              fontSize: 20.sp,
-              fontWeight: FontWeight.w600,
-              color: Colors.white),
+        Padding(
+          padding: const EdgeInsets.only(left: 20.0,top: 10),
+          child: Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              'Recent Bookings',
+              style: TextStyle(
+                  fontSize: 24.sp,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black),
+            ),
+          ),
         ),
         Image.asset('assets/images/home_image.jpeg')
       ],

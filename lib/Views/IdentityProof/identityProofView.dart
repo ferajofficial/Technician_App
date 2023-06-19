@@ -3,17 +3,17 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:repairs_duniya_s/Screen_page/IdentityProofPage/chargesCollected.dart';
-import 'package:repairs_duniya_s/Screen_page/IdentityProofPage/imageUpload.dart';
+import 'package:repairs_duniya_s/Views/ChargesCollected/chargesCollectedView.dart';
+import 'package:repairs_duniya_s/Views/IdentityProof/imageUploadView.dart';
 
-class IdentityProof extends StatefulWidget {
-  const IdentityProof({Key? key}) : super(key: key);
+class IdentityProofView extends StatefulWidget {
+  const IdentityProofView({Key? key}) : super(key: key);
 
   @override
-  State<IdentityProof> createState() => _IdentityProofState();
+  State<IdentityProofView> createState() => _IdentityProofViewState();
 }
 
-class _IdentityProofState extends State<IdentityProof> {
+class _IdentityProofViewState extends State<IdentityProofView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,7 +61,7 @@ class _IdentityProofState extends State<IdentityProof> {
                       ),
                       ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: ImageUpload()),
+                          child: ImageUploadView()),
                     ],
                   ),
                   SizedBox(width: 20.w,),
@@ -80,7 +80,7 @@ class _IdentityProofState extends State<IdentityProof> {
                       ),
                       ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: ImageUpload()),
+                          child: ImageUploadView()),
                     ],
                   ),
                 ],
@@ -102,7 +102,7 @@ class _IdentityProofState extends State<IdentityProof> {
                 ),
                 ClipRRect(
                     borderRadius: BorderRadius.circular(10),
-                    child: ImageUpload()),
+                    child: ImageUploadView()),
               ],
             ),
             Container(
@@ -114,9 +114,7 @@ class _IdentityProofState extends State<IdentityProof> {
                   borderRadius: BorderRadius.circular(10)
               ),
               child: TextButton(
-                onPressed: (){
-                   Navigator.push(context, MaterialPageRoute(builder: ((context)=>ChargesCollected())));
-                },
+                onPressed: (){},
                 child: Text('Next',
                   style: TextStyle(color: Colors.black,fontSize: 18),
                 ),

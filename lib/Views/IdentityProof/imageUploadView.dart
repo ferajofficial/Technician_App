@@ -6,14 +6,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 //import '../Helpers/import.dart';
 
-class ImageUpload extends StatefulWidget {
-  const ImageUpload({Key? key}) : super(key: key);
+class ImageUploadView extends StatefulWidget {
+  const ImageUploadView({Key? key}) : super(key: key);
 
   @override
-  State<ImageUpload> createState() => _ImageUploadState();
+  State<ImageUploadView> createState() => _ImageUploadViewState();
 }
 
-class _ImageUploadState extends State<ImageUpload> {
+class _ImageUploadViewState extends State<ImageUploadView> {
   File? _image;
   final picker = ImagePicker();
 

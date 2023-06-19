@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(builder: (context,index){
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: WelcomeView(),
+        home: BottomNavigationBar1(),
       );
     },
 

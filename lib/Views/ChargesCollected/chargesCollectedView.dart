@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-class ChargesCollected extends StatefulWidget {
-  const ChargesCollected({Key? key}) : super(key: key);
+class ChargesCollectedView extends StatefulWidget {
+  const ChargesCollectedView({Key? key}) : super(key: key);
 
   @override
-  State<ChargesCollected> createState() => _ChargesCollectedState();
+  State<ChargesCollectedView> createState() => _ChargesCollectedViewState();
 }
 
-class _ChargesCollectedState extends State<ChargesCollected> {
+class _ChargesCollectedViewState extends State<ChargesCollectedView> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController chargeController=TextEditingController();
   final TextEditingController totalController=TextEditingController();
