@@ -10,10 +10,10 @@ class ImageUploadView extends StatefulWidget {
   const ImageUploadView({Key? key}) : super(key: key);
 
   @override
-  State<ImageUploadView> createState() => ImageUploadViewState();
+  State<ImageUploadView> createState() => _ImageUploadViewState();
 }
 
-class ImageUploadViewState extends State<ImageUploadView> {
+class _ImageUploadViewState extends State<ImageUploadView> {
   File? _image;
   final picker = ImagePicker();
 

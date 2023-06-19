@@ -11,8 +11,10 @@ class BottomNavBarView extends StatefulWidget {
 class BottomNavBarViewState extends State<BottomNavBarView> {
   int _currentIndex = 0;
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final List<Widget> _pagesfooter = [
-    const HomeView(),
+  final List<Widget> _pagesfooter=[
+    // const HomeView(),
+    const NormalBooking(),
+    //const UrgentBook(),
     const RewardView(),
     const ProfileView()
   ];
