@@ -40,7 +40,7 @@ class EarningsViewState extends State<EarningsView> {
         elevation: 0,
         backgroundColor: Colors.black,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: Colors.white,
             size: 30,
@@ -50,7 +50,7 @@ class EarningsViewState extends State<EarningsView> {
           },
         ),
       ),
-      body: Container(
+      body: SizedBox(
         width: MediaQuery.of(context).size.width,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -58,7 +58,7 @@ class EarningsViewState extends State<EarningsView> {
             SizedBox(
               height: 20.h,
             ),
-            Text(
+            const Text(
               'My Earnings',
               style: TextStyle(fontSize: 27, fontWeight: FontWeight.w700),
             ),
@@ -66,11 +66,11 @@ class EarningsViewState extends State<EarningsView> {
               height: 15.h,
             ),
             Container(
-              margin: EdgeInsets.only(left: 40),
+              margin: const EdgeInsets.only(left: 40),
               alignment: Alignment.centerLeft,
               child: DropdownButton<String>(
                 value: selectedPreference,
-                items: [
+                items: const [
                   DropdownMenuItem<String>(
                     value: 'Daily',
                     child: Text('Daily'),
@@ -96,14 +96,14 @@ class EarningsViewState extends State<EarningsView> {
             ),
             Center(
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: SfCartesianChart(
                   primaryXAxis: CategoryAxis(
-                      majorGridLines: MajorGridLines(width: 0),
-                      minorGridLines: MinorGridLines(width: 0)),
+                      majorGridLines: const MajorGridLines(width: 0),
+                      minorGridLines: const MinorGridLines(width: 0)),
                   primaryYAxis: NumericAxis(
-                      majorGridLines: MajorGridLines(width: 0),
-                      minorGridLines: MinorGridLines(width: 0)),
+                      majorGridLines: const MajorGridLines(width: 0),
+                      minorGridLines: const MinorGridLines(width: 0)),
                   series: <ChartSeries<Earnings, String>>[
                     ColumnSeries<Earnings, String>(
                       dataSource: earnings,
@@ -115,19 +115,19 @@ class EarningsViewState extends State<EarningsView> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 30.0, bottom: 15),
+            const Padding(
+              padding: EdgeInsets.only(top: 30.0, bottom: 15),
               child: Text(
-                'Today Total Earnings',
+                '''Today's Total Earnings''',
                 style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.w600,
                     fontStyle: FontStyle.italic),
               ),
             ),
-            Text.rich(
+            const Text.rich(
               TextSpan(
-                text: 'Rs. ',
+                text: 'Rs.',
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                 children: <TextSpan>[
                   TextSpan(

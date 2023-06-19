@@ -7,9 +7,9 @@ class RejectedBookingView extends StatelessWidget {
     return Container(
       height: 220.h,
       width: 320.w,
-      margin: EdgeInsets.only(top: 30),
+      margin: const EdgeInsets.only(top: 30),
       decoration: BoxDecoration(
-        color: Color(0xfffaf6ed),
+        color: const Color(0xfffaf6ed),
         borderRadius: BorderRadius.circular(20),
         gradient: LinearGradient(
           colors: [
@@ -20,7 +20,7 @@ class RejectedBookingView extends StatelessWidget {
           end: Alignment.topRight,
           stops: const [0.5, 0.9],
         ),
-        boxShadow: [
+        boxShadow:const [
           BoxShadow(
               offset: Offset(2, 2), blurRadius: 1, color: Color(0xffb5b3b3))
         ],

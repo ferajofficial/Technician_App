@@ -1,12 +1,11 @@
-import 'dart:math';
-
 import '../../Helpers/import.dart';
 
 class BookingConfirmationView extends StatefulWidget {
   const BookingConfirmationView({Key? key}) : super(key: key);
 
   @override
-  State<BookingConfirmationView> createState() => BookingConfirmationViewState();
+  State<BookingConfirmationView> createState() =>
+      BookingConfirmationViewState();
 }
 
 class BookingConfirmationViewState extends State<BookingConfirmationView> {
@@ -15,16 +14,19 @@ class BookingConfirmationViewState extends State<BookingConfirmationView> {
   @override
   void initState() {
     super.initState();
-    _confettiController = ConfettiController(duration: const Duration(seconds: 3));
+    _confettiController =
+        ConfettiController(duration: const Duration(seconds: 3));
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _confettiController.play();
     });
   }
+
   @override
   void dispose() {
     _confettiController.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,46 +34,70 @@ class BookingConfirmationViewState extends State<BookingConfirmationView> {
       body: Stack(
         children: [
           SizedBox(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
+            width: 500,
+            height: 800,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ConfettiWidget(
-                    confettiController: _confettiController,
-                    blastDirectionality: BlastDirectionality.explosive,
-                    shouldLoop: false,
-                    colors: const [Colors.orange, Colors.blue, Colors.green,Colors.red,Colors.yellow],
-                    gravity: 0.3,
-                    numberOfParticles:20,
-                    maximumSize: const Size(10, 10),
-                    minimumSize: const Size(1,1),
-                    child: Image.asset('images/check4.jpeg',scale: 2,),
+                  confettiController: _confettiController,
+                  blastDirectionality: BlastDirectionality.explosive,
+                  shouldLoop: false,
+                  colors: const [
+                    Colors.orange,
+                    Colors.blue,
+                    Colors.green,
+                    Colors.red,
+                    Colors.yellow
+                  ],
+                  gravity: 0.3,
+                  numberOfParticles: 20,
+                  maximumSize: const Size(10, 10),
+                  minimumSize: const Size(1, 1),
+                  child: Image.asset(
+                    'assets/images/check4.jpeg',
+                    scale: 2,
+                    // height: 300,
+                  ),
                 ),
-               const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 30.0,vertical: 10),
-                  child: Text('Your Appoinment Booked Successfully',
-                    style: TextStyle(color: Colors.green,fontSize: 30,fontWeight: FontWeight.w600),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10),
+                  child: Text(
+                    'Your Appoinment Booked Successfully',
+                    style: TextStyle(
+                        color: Colors.green,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w600),
                     textAlign: TextAlign.center,
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 45,bottom: 15),
+                  padding: const EdgeInsets.only(top: 45, bottom: 15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text('Booking Details',
-                        style: TextStyle(color: Colors.black,fontSize: 27,fontWeight: FontWeight.w500),),
+                      const Text(
+                        'Booking Details',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 27,
+                            fontWeight: FontWeight.w500),
+                      ),
                       ConfettiWidget(
-                          confettiController: _confettiController,
-                          blastDirectionality: BlastDirectionality.explosive,
-                          shouldLoop: false,
-                          colors: const [Colors.orange, Colors.blue, Colors.green,Colors.red,Colors.yellow],
-                          gravity: 0.3,
-                          numberOfParticles:15,
-                         maximumSize: const Size(10, 10),
-                          minimumSize:const  Size(1,1),
-
+                        confettiController: _confettiController,
+                        blastDirectionality: BlastDirectionality.explosive,
+                        shouldLoop: false,
+                        colors: const [
+                          Colors.orange,
+                          Colors.blue,
+                          Colors.green,
+                          Colors.red,
+                          Colors.yellow
+                        ],
+                        gravity: 0.3,
+                        numberOfParticles: 15,
+                        maximumSize: const Size(10, 10),
+                        minimumSize: const Size(1, 1),
                       ),
                     ],
                   ),
@@ -79,13 +105,13 @@ class BookingConfirmationViewState extends State<BookingConfirmationView> {
                 RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
-                      style: TextStyle(color: Colors.grey.shade600,fontSize: 17),
+                      style:
+                          TextStyle(color: Colors.grey.shade600, fontSize: 17),
                       children: const [
                         TextSpan(text: 'Booking ID : 9132948425\n'),
                         TextSpan(text: 'Booking Date : 19/12/2023\n'),
                         TextSpan(text: 'Contact Us : 1234567891\n'),
-                      ]
-                  ),
+                      ]),
                 ),
               ],
             ),
@@ -93,22 +119,39 @@ class BookingConfirmationViewState extends State<BookingConfirmationView> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 10.0),
-              child: ElevatedButton(
-                  onPressed: (){},
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black87),
-                  fixedSize: MaterialStateProperty.all<Size>(
-                    Size(230.w, 52.h),
+              padding: const EdgeInsets.only(bottom: 25.0),
+              child: SizedBox(
+                height: 45.h,
+                width: 200.w,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const BottomNavBarView()),
+                        (route) => false);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
                   ),
-                ),
-                  child: const Row(
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.arrow_back),
-                      Text(' Return To Home',)
+                      const Icon(Icons.arrow_back),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Text(' Return To Home',
+                          style: GoogleFonts.poppins(
+                            fontSize: 15.sp,
+                            fontWeight: FontWeight.w600,
+                          ))
                     ],
                   ),
+                ),
               ),
             ),
           ),
@@ -118,11 +161,17 @@ class BookingConfirmationViewState extends State<BookingConfirmationView> {
               confettiController: _confettiController,
               blastDirectionality: BlastDirectionality.explosive,
               shouldLoop: true,
-              colors: const [Colors.orange, Colors.blue, Colors.green,Colors.red,Colors.yellow],
+              colors: const [
+                Colors.orange,
+                Colors.blue,
+                Colors.green,
+                Colors.red,
+                Colors.yellow
+              ],
               gravity: 0.3,
-              numberOfParticles:15,
+              numberOfParticles: 15,
               maximumSize: const Size(10, 10),
-              minimumSize: const Size(1,1),
+              minimumSize: const Size(1, 1),
             ),
           ),
           Align(
@@ -131,14 +180,19 @@ class BookingConfirmationViewState extends State<BookingConfirmationView> {
               confettiController: _confettiController,
               blastDirectionality: BlastDirectionality.explosive,
               shouldLoop: false,
-              colors: const [Colors.orange, Colors.blue, Colors.green,Colors.red,Colors.yellow],
+              colors: const [
+                Colors.orange,
+                Colors.blue,
+                Colors.green,
+                Colors.red,
+                Colors.yellow
+              ],
               gravity: 0.3,
-              numberOfParticles:15,
+              numberOfParticles: 15,
               maximumSize: const Size(10, 10),
-              minimumSize: const Size(1,1),
+              minimumSize: const Size(1, 1),
             ),
           ),
-
         ],
       ),
     );

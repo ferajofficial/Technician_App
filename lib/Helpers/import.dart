@@ -9,9 +9,7 @@ export 'package:repairs_duniya_s/Views/Rewards/rewardView.dart';
 export '../Views/HomePage/homeView.dart';
 export '../Utilities/drawerView.dart';
 
-
 export 'dart:io';
-
 
 export 'package:image_picker/image_picker.dart';
 
@@ -29,22 +27,17 @@ export 'package:repairs_duniya_s/Views/Login/phoneView.dart';
 
 export 'package:confetti/confetti.dart';
 
-
 export 'package:google_fonts/google_fonts.dart';
-
-
 
 export 'package:syncfusion_flutter_charts/charts.dart';
 
-
-export'package:repairs_duniya_s/Views/Login/otpView.dart';
-
+export 'package:repairs_duniya_s/Views/Login/otpView.dart';
 
 export 'package:pinput/pinput.dart';
 
 export '../Views/IdentityProof/idproofView.dart';
 export '../Views/UploadImages/imageUpload.dart';
-export '../Views/ChargesCollected/chargesCollectedView.dart';
+// export '../Views/ChargesCollected/chargesCollectedView.dart';
 export '../Views/CollectedCharges/chargesCollected.dart';
 // export '../Screen_page/IdentityProofPage/identityProof.dart';
 
@@ -57,3 +50,4 @@ export '../Views/MyBookings/workDoneView.dart';
 export '../Views/MyBookings/rejectedView.dart';
 
 export '../Views/BookingOtp/BookingOtpView.dart';
+export 'package:repairs_duniya_s/Views/BookingConfirmation/bookingConfirmationView.dart';

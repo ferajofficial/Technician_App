@@ -66,7 +66,7 @@ class HomeViewState extends State<HomeView> {
         ),
 
       ),
-      // bottomNavigationBar: BottomNavBarView(),
+
     );
   }
 }

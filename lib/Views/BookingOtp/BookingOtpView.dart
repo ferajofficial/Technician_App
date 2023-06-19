@@ -23,7 +23,7 @@ class _BookingOtpViewState extends State<BookingOtpView> {
     );
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Container(
+      body: SizedBox(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: Column(

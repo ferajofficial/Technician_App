@@ -13,7 +13,7 @@ class BottomNavBarViewState extends State<BottomNavBarView> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final List<Widget> _pagesfooter=[
     // const HomeView(),
-    const NormalBooking(),
+    const NormalBookingView(),
     //const UrgentBook(),
     const RewardView(),
     const ProfileView()

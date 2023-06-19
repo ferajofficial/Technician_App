@@ -7,9 +7,9 @@ class PendingBookingView extends StatelessWidget {
     return Container(
       height: 200.h,
       width: 320.w,
-      margin: EdgeInsets.only(top: 30),
+      margin: const EdgeInsets.only(top: 30),
       decoration: BoxDecoration(
-        color: Color(0xfffaf6ed),
+        color: const Color(0xfffaf6ed),
         borderRadius: BorderRadius.circular(20),
         gradient: LinearGradient(
           colors: [
@@ -20,7 +20,7 @@ class PendingBookingView extends StatelessWidget {
           end: Alignment.topRight,
           stops: const [0.5, 0.9],
         ),
-        boxShadow: [
+        boxShadow:const [
           BoxShadow(
               offset: Offset(2, 2), blurRadius: 1, color: Color(0xffb5b3b3))
         ],
@@ -36,7 +36,7 @@ class PendingBookingView extends StatelessWidget {
                 height: 30.h,
                 width:110.w,
                 decoration: BoxDecoration(
-                    color: Color(0xffde5a2f),
+                    color:const  Color(0xffde5a2f),
                     borderRadius: BorderRadius.circular(10),
                 ),
                 child: TextButton(
@@ -83,14 +83,14 @@ class PendingBookingView extends StatelessWidget {
                   child:  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.phone, color: Colors.white, size: 16,),
+                      const Icon(Icons.phone, color: Colors.white, size: 16,),
                       SizedBox(width: 4.w),
                       Text('Call', style: TextStyle(color: Colors.white, fontSize: 12.sp,),),
                     ],
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
                   height: 32.h,
                   width:110.w,
                   decoration: BoxDecoration(
@@ -114,7 +114,7 @@ class PendingBookingView extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.location_pin, color: Colors.white, size: 16,),
+                      const Icon(Icons.location_pin, color: Colors.white, size: 16,),
                       SizedBox(width: 4.w),
                       Text('Direction', style: TextStyle(color: Colors.white, fontSize: 12.sp,),),
                     ],

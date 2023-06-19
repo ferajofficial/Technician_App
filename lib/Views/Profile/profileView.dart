@@ -19,11 +19,13 @@ class _MyProfileState extends State<ProfileView> {
     emailController.dispose();
     super.dispose();
   }
+
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
       print('Form submitted');
     }
   }
+
   File? _image;
   final picker = ImagePicker();
 
@@ -102,7 +104,10 @@ class _MyProfileState extends State<ProfileView> {
                       );
                     },
                     child: CircleAvatar(
-                      backgroundImage: _image != null ? FileImage(_image!) : AssetImage('assets/images/profile.png')as ImageProvider<Object>,
+                      backgroundImage: _image != null
+                          ? FileImage(_image!)
+                          : AssetImage('assets/images/profile.png')
+                              as ImageProvider<Object>,
                       backgroundColor: Colors.transparent,
                       radius: 50,
                     ),
@@ -140,8 +145,8 @@ class _MyProfileState extends State<ProfileView> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      validator: (value){
-                        if(value==null || value.isEmpty)
+                      validator: (value) {
+                        if (value == null || value.isEmpty)
                           return 'please enter name';
                       },
                     ),
@@ -181,8 +186,8 @@ class _MyProfileState extends State<ProfileView> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      validator: (value){
-                        if(value==null || value.isEmpty)
+                      validator: (value) {
+                        if (value == null || value.isEmpty)
                           return 'please enter name';
                       },
                     ),
@@ -220,8 +225,8 @@ class _MyProfileState extends State<ProfileView> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      validator: (value){
-                        if(value==null || value.isEmpty)
+                      validator: (value) {
+                        if (value == null || value.isEmpty)
                           return 'please enter name';
                       },
                     ),
@@ -232,7 +237,7 @@ class _MyProfileState extends State<ProfileView> {
           ),
         ),
         Positioned(
-          top: 430.h,
+          top: 380.h,
           left: 120.w,
           child: Container(
             height: 40.h,
