@@ -1,15 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:repairs_duniya_s/Views/ChargesCollected/chargesCollectedView.dart';
-import 'package:repairs_duniya_s/Views/IdentityProof/identityProofView.dart';
-// import 'package:repairs_duniya_s/Screen_page/MyEarnings/my_earnings.dart';
-// import 'package:repairs_duniya_s/Screen_page/UploadVideoPages/before_work_page.dart';
-// import 'package:repairs_duniya_s/Screen_page/WelcomePage/welcom_page.dart';
-// import 'package:repairs_duniya_s/bottomNavigationBar.dart';
 
-
-
-// function to trigger app build
 import '../Helpers/import.dart';
 
 class Mydrawer extends StatelessWidget {

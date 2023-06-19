@@ -53,3 +53,5 @@ export '../Views/MyBookings/PendingView.dart';
 export '../Views/MyBookings/urgentBookingView.dart';
 export '../Views/MyBookings/workDoneView.dart';
 export '../Views/MyBookings/rejectedView.dart';
+
+export '../Views/BookingOtp/BookingOtpView.dart';
