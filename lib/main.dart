@@ -12,9 +12,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       builder: (context, index) {
         return const MaterialApp(
-            debugShowCheckedModeBanner: false, home: WelcomeView()
-            // const BottomNavBarView(),
-            );
+            debugShowCheckedModeBanner: false, home: WelcomeView());
       },
     );
   }

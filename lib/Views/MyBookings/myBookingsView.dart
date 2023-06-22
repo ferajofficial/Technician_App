@@ -81,7 +81,7 @@ class _BookingViewState extends State<BookingView> {
             ),
             Visibility(
                 visible: selectedOption == 'Pending Bookings',
-                child: const PendingBookingView()),
+                child:  PendingBookingView()),
             Visibility(
               visible: selectedOption == 'Rejected',
               child: const RejectedBookingView(),

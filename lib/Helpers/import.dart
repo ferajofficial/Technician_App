@@ -51,3 +51,5 @@ export '../Views/MyBookings/rejectedView.dart';
 
 export '../Views/BookingOtp/BookingOtpView.dart';
 export 'package:repairs_duniya_s/Views/BookingConfirmation/bookingConfirmationView.dart';
+export 'package:repairs_duniya_s/Utilities/Timer.dart';
+export 'dart:async';

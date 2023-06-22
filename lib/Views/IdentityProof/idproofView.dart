@@ -1,12 +1,6 @@
-import 'dart:io';
 
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:repairs_duniya_s/Views/CollectedCharges/chargesCollected.dart';
-import 'package:repairs_duniya_s/Views/UploadImages/imageUpload.dart';
 
-import '../../Utilities/bottom_NavBarView.dart';
+import '../../Helpers/import.dart';
 
 class IdentityProofView extends StatefulWidget {
   const IdentityProofView({Key? key}) : super(key: key);

@@ -43,9 +43,13 @@ class _MyProfileState extends State<ProfileView> {
     return Stack(
       children: [
         Container(
-          color: Colors.black,
           height: MediaQuery.of(context).size.height / 3,
           width: MediaQuery.of(context).size.width,
+          decoration: const BoxDecoration(
+              color: Colors.black,
+              borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(30),
+                  bottomLeft: Radius.circular(30))),
         ),
         Align(
           alignment: Alignment.center,
@@ -77,20 +81,20 @@ class _MyProfileState extends State<ProfileView> {
                         context: context,
                         builder: (BuildContext context) {
                           return AlertDialog(
-                            title: Text('Upload Image'),
+                            title: const Text('Upload Image'),
                             content: SingleChildScrollView(
                               child: ListBody(
                                 children: <Widget>[
                                   GestureDetector(
-                                    child: Text('Camera'),
+                                    child: const Text('Camera'),
                                     onTap: () {
                                       _pickImage1(ImageSource.camera);
                                       Navigator.of(context).pop();
                                     },
                                   ),
-                                  Padding(padding: EdgeInsets.all(8.0)),
+                                  const Padding(padding: EdgeInsets.all(8.0)),
                                   GestureDetector(
-                                    child: Text('Gallery'),
+                                    child: const Text('Gallery'),
                                     onTap: () {
                                       _pickImage1(ImageSource.gallery);
                                       Navigator.of(context).pop();
@@ -106,12 +110,34 @@ class _MyProfileState extends State<ProfileView> {
                     child: CircleAvatar(
                       backgroundImage: _image != null
                           ? FileImage(_image!)
-                          : AssetImage('assets/images/profile.png')
+                          : const AssetImage('assets/images/profile.png')
                               as ImageProvider<Object>,
                       backgroundColor: Colors.transparent,
                       radius: 50,
                     ),
                   ),
+                  //* if the serviceholder exists before then only shows this
+                  //* ratings bar upon his/her profile other wise no need to show here */
+                  // Padding(
+                  //   padding: const EdgeInsets.only(left: 10.0),
+                  //   child: Row(
+                  //     mainAxisAlignment: MainAxisAlignment.center,
+                  //     children: [
+                  //       const Icon(Icons.star, color: Colors.amber),
+                  //       const Icon(Icons.star, color: Colors.amber),
+                  //       const Icon(Icons.star, color: Colors.amber),
+                  //       const Icon(Icons.star_half, color: Colors.amber),
+                  //       const Icon(Icons.star_outline, color: Colors.amber),
+                  //       Text(
+                  //         "(4.6)",
+                  //         style: GoogleFonts.poppins(
+                  //           textStyle:
+                  //               TextStyle(fontSize: 15.sp, color: Colors.black),
+                  //         ),
+                  //       )
+                  //     ],
+                  //   ),
+                  // ),
                   Container(
                     width: 270.w,
                     padding: const EdgeInsets.only(top: 27),
